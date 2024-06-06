@@ -32,7 +32,7 @@ export const actions = {
 		// Generate id and add link to DB
 		const id = nanoid(6);
 
-		await platform?.env?.DB.prepare('INSERT INTO links VALUES (?,?,?)').bind(id, bigUrl, 0).run();
+		await platform?.env.DB.prepare('INSERT INTO links VALUES (?,?,?)').bind(id, bigUrl, 0).run();
 
 		return {
 			success: true,
