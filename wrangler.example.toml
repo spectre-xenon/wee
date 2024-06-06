@@ -1,6 +1,0 @@
-name = "wee" # Project Name
-
-# Your KV namespaces
-kv_namespaces = [
-    { binding = "weeKV", id = "12938712893712983798127398172323123798" },
-]

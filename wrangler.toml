@@ -1,0 +1,3 @@
+name = "wee"
+
+kv_namespaces = [{ binding = "weeKV", id = "3c0950a979d8408eab0df80aea7c12cc" }]
