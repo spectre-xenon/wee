@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { page } from '$app/stores';
 
 	import type { ActionData } from './$types';
 
@@ -8,7 +9,7 @@
 
 {#if form?.success}
 	<h1>{form.message}</h1>
-	<p>link is: <a href={form.link}>{form.link}</a></p>
+	<p>link is: <a href={form.link}>{$page.url.toString() + '/' + form.link}</a></p>
 {/if}
 
 {#if form?.invalid}
@@ -17,7 +18,7 @@
 
 {#if form?.exists}
 	<h1>{form.message}</h1>
-	<p>link is: <a href={form.link}>{form.link}</a></p>
+	<p>link is: <a href={form.link}>{$page.url.toString() + '/' + form.link}</a></p>
 {/if}
 
 <form method="POST" use:enhance>
